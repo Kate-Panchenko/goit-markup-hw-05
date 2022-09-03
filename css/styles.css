@@ -116,10 +116,6 @@ ul, ol {
 
 /* HEADER */
 
-.menu .menu-link.current {
-    color: var(--accent-color);
-}
-
 .page-header-container,
 .page-navigation-container,
 .contacts-container {
@@ -134,8 +130,7 @@ ul, ol {
 }
 
 .page-header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 7px;
     border-bottom: 1px solid var(--header-border);
 }
 
@@ -155,7 +150,44 @@ ul, ol {
 }
 
 .menu-link {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 31px;
     color: var(--primary-text-color);
+}
+
+.menu-link::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    right: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background: var(--accent-color);
+    transform: scale(0);
+    transition: transform var(--transition-basic);
+}
+
+.menu-link:hover::before,
+.menu-link:focus::before {
+    transform: scale(1);
+}
+
+.menu-link.current {
+    color: var(--accent-color);
+}
+
+.menu-link.current::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    right: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background: var(--accent-color);
 }
 
 .page-header-contacts {
