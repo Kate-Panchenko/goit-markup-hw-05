@@ -14,6 +14,7 @@
     --border-color: #EEEEEE;
     --header-border: #ECECEC;
     --icon-color: #AFB1B8;
+    --transition-basic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {
@@ -144,6 +145,7 @@ ul, ol {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color var(--transition-basic);
 }
 
 .contact {
@@ -217,6 +219,7 @@ ul, ol {
     border-radius: 4px;
     cursor: pointer;
     border: 0;
+    transition: color var(--transition-basic), background-color var(--transition-basic);
     
     color: var(--primary-white-color);
     background-color: var(--accent-color);
@@ -327,6 +330,8 @@ ul, ol {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+
+    transition: background-color var(--transition-basic);
 }
 
 .sm-link-icon:hover,
@@ -336,6 +341,7 @@ ul, ol {
 
 .icon {
     fill: var(--icon-color);
+    transition: fill var(--transition-basic);
 }
 
 .sm-link-icon:hover .icon,
@@ -367,6 +373,8 @@ ul, ol {
     fill: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+
+    transition: fill var(--transition-basic), border var(--transition-basic);
 }
 
 .client:hover,
@@ -408,6 +416,8 @@ ul, ol {
     font-size: 14px;
     line-height: 1.71;
     color: var(--opacity-white);
+
+    transition: color var(--transition-basic);
 }
 
 .location:hover,
@@ -465,6 +475,8 @@ ul, ol {
     background-color: var(--primary-grey-color);
     cursor: pointer;
     border: 0;
+
+    transition: color var(--transition-basic), background-color var(--transition-basic), box-shadow var(--transition-basic);
 }
 
 .filter-item-btn:hover,
@@ -484,6 +496,10 @@ ul, ol {
 .portfolio-item {
     flex-basis: calc((100% - 60px) / 3);
 
+}
+
+.portfolio-item-link {
+    transition: box-shadow var(--transition-basic);
 }
 
 .portfolio-item-link:hover,
