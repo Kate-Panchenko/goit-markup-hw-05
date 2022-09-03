@@ -11,6 +11,7 @@
     --primary-grey-color: #F5F4FA;
     --opacity-white: rgba(255, 255, 255, 0.6);
     --footer-icon-bcg: rgba(255, 255, 255, 0.1);
+    --description-bcg: rgba(47, 48, 58, 0.8);
     --border-color: #EEEEEE;
     --header-border: #ECECEC;
     --icon-color: #AFB1B8;
@@ -308,6 +309,30 @@ ul, ol {
 .gallery-list {
     display: flex;
     justify-content: space-between;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--description-bcg);
+}
+
+.gallery-item-desc {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
 }
 
 /* TEAM */
